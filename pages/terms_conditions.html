@@ -34,7 +34,9 @@
           </form>
         </div>
         <div class="tools">
-          <button class="btn me-2"><img src="../assest/Heart.gif" alt="Cart" class="tool-items" /></button>
+          <button class="btn me-2">
+            <img src="../assest/Heart.gif" alt="WishList" class="tool-items" />
+          </button>
           <button class="btn">
             <img src="../assest/cart.gif" alt="Cart" class="tool-items" />
           </button>
@@ -65,82 +67,84 @@
         <script>
           const termsAndConditions = [
             {
-              id : 1,
+              id: 1,
               section: "Introduction",
               content:
                 "Welcome to Venom Apparel! By accessing or using our website, making purchases, or interacting with our content, you agree to comply with and be bound by these Terms and Conditions. Please read them carefully. If you do not agree to these terms, please refrain from using our website.",
             },
             {
-              id : 2,
+              id: 2,
               section: "Acceptance of Terms",
               content:
                 "By using the services provided by Venom Apparel or accessing our website, you agree to abide by these Terms and Conditions, as well as any applicable laws. You also agree to our Privacy Policy, which outlines how we collect and handle your personal information.",
             },
             {
-              id : 3,
+              id: 3,
               section: "Changes to Terms",
               content:
                 "We reserve the right to update, modify, or change these Terms and Conditions at any time. Any changes will be posted on this page, and the revised date will be listed at the top. It is your responsibility to review these terms periodically. By continuing to use the website after any changes are made, you accept the updated terms.",
             },
             {
-              id : 4,
+              id: 4,
               section: "Privacy Policy",
               content:
                 "Please refer to our Privacy Policy for details on how we collect, use, and store your personal information. By using our site, you consent to the collection and use of your data as described.",
             },
             {
-              id : 5,
+              id: 5,
               section: "Product Information and Availability",
               content:
                 "We make every effort to ensure the accuracy of the information provided on our website. However, we cannot guarantee that product descriptions, prices, or availability are error-free. Venom Apparel reserves the right to modify or discontinue products at any time. Products may differ in color and design based on individual monitor settings.",
             },
             {
-              id : 6,
+              id: 6,
               section: "Pricing and Payment",
               content:
                 "Prices are subject to change without notice. Additional fees such as taxes, shipping, and handling may apply. Payment is required at the time of purchase. Available payment methods include credit/debit cards, PayPal, and other third-party platforms.",
             },
             {
-              id : 7,
+              id: 7,
               section: "Orders and Shipping",
               content:
                 "We will make every effort to ship your items promptly. Shipping times are estimates and may vary depending on destination and availability of products. Venom Apparel is not responsible for delays caused by external factors like weather, customs, or postal services.",
             },
             {
-              id : 8,
+              id: 8,
               section: "Return and Refund Policy",
               content:
                 "We accept returns within 30 days of delivery. Items must be in their original condition and packaging. Please refer to our Return Policy for further details.",
             },
             {
-              id : 9,
+              id: 9,
               section: "Intellectual Property",
               content:
                 "All content, including images, text, logos, and trademarks, displayed on the Venom Apparel website is the property of Venom Apparel or its licensors. This content is protected by copyright, trademark, and other intellectual property laws. You may not use, reproduce, or distribute any content from the website without permission.",
             },
             {
-              id : 10,
+              id: 10,
               section: "Limitation of Liability",
               content:
                 "Venom Apparel will not be liable for any indirect, incidental, or consequential damages arising from your use of the website, including any loss of profits, data, or business opportunities. Our liability is limited to the amount paid for the product or service in question.",
             },
             {
-              id : 11,
+              id: 11,
               section: "Governing Law",
               content:
                 "These Terms and Conditions are governed by the laws of [Your Country or State], without regard to its conflict of law principles. Any disputes arising from these terms will be resolved in the appropriate courts of [Your Country or State].",
             },
             {
-              id : 12,
+              id: 12,
               section: "Dispute Resolution",
               content:
                 "In case of a dispute, we encourage you to contact us directly to resolve any issues. If a resolution cannot be reached, disputes will be resolved through binding arbitration, rather than in court.",
             },
           ];
 
-          document.write(`<div class="accordion accordion-flush" id="accordionFlushExample">`);
-          
-          termsAndConditions.forEach(term =>{
+          document.write(
+            `<div class="accordion accordion-flush" id="accordionFlushExample">`
+          );
+
+          termsAndConditions.forEach((term) => {
             document.write(`
               <div class="accordion-item">
                 <h2 class="accordion-header">
@@ -156,7 +160,6 @@
           });
 
           document.write(`</div>`);
-
         </script>
       </div>
     </section>

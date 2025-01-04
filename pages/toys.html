@@ -34,13 +34,25 @@
           </form>
         </div>
         <div class="tools">
-          <button class="btn" title="WishList">
-            <img src="../assest/Heart.gif" alt="Cart" class="tool-items" />
+          <button
+            class="btn"
+            title="WishList"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#staticBackdrop"
+            aria-controls="staticBackdrop"
+            onclick="display()"
+          >
+            <img src="../assest/Heart.gif" alt="WishList" class="tool-items" />
           </button>
           <button class="btn" title="Cart">
             <img src="../assest/cart.gif" alt="Cart" class="tool-items" />
           </button>
-          <button class="btn" title="Login" onclick="window.location.href='login.html'">
+          <button
+            class="btn"
+            title="Login"
+            onclick="window.location.href='login.html'"
+          >
             <img src="../assest/user.gif" alt="User" class="tool-items" />
           </button>
         </div>
@@ -168,7 +180,7 @@
                     <div class="card-body"><h5 class="card-title">${item.price}</h5></div>
                     <p class="card-text px-3">${item.title}</p>
                     <div class="card-footer text-end">
-                      <button class="btn me-2"><img src="../assest/Heart.gif" alt="Cart" class="tool-items" /></button>
+                      <button class="btn me-2" onClick="addToCart([${item.id}]);"><img src="../assest/Heart.gif" alt="WishList" class="tool-items" /></button>
                       <a href="#" class="btn btn-primary px-3">READ MORE</a>
                     </div>
                 </div>
@@ -291,6 +303,73 @@
         </p>
       </footer>
     </section>
+
+    <script>
+      window.localStorage.setItem("cart", JSON.stringify([]));
+
+      function addToCart(item) {
+        let cart = JSON.parse(localStorage.getItem("cart"));
+        cart.push(item);
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+
+      const display = () => {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const container = document.getElementById("wishlist-items");
+
+        if (!container) {
+          console.error("Container with ID 'wishlist-items' not found.");
+          return;
+        }
+
+        container.innerHTML = "";
+
+        cart.forEach((id) => {
+          items.forEach((item) => {
+            if (item.id == id) {
+              const card = `
+                    <div class="card mb-3" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="${item.image}" class="img-fluid rounded-start" alt="${item.title}">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">${item.title}</h5>
+                            <p class="card-text">Price: ${item.price}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                      `;
+              container.innerHTML += card;
+            }
+          });
+        });
+      };
+    </script>
+
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-backdrop="static"
+      tabindex="-1"
+      id="staticBackdrop"
+      aria-labelledby="staticBackdropLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="staticBackdropLabel">WishList</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div id="wishlist-items"></div>
+      </div>
+    </div>
+
     <script src="../bootstrap.js"></script>
   </body>
 </html>
