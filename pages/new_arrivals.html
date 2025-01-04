@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venom</title>
+    <link rel="icon" href="../assest/venom.svg" />
+    <link rel="stylesheet" href="../bootstrap.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <section class="navigation-bar">
+      <div class="navbar">
+        <div class="logo">
+          <a href="../index.html">
+            <img
+              src="../assest/Venom_logo.png"
+              alt="Brand Logo"
+              class="brand-logo"
+            />
+          </a>
+        </div>
+        <div class="search-bar-tool">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control search-bar"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn search-btn-icon" type="submit">
+              <img src="../assest/search.svg" alt="Search" />
+            </button>
+          </form>
+        </div>
+        <div class="tools">
+          <button class="btn" title="WishList">
+            <img src="../assest/Heart.gif" alt="Cart" class="tool-items" />
+          </button>
+          <button class="btn" title="Cart">
+            <img src="../assest/cart.gif" alt="Cart" class="tool-items" />
+          </button>
+          <button
+            class="btn"
+            title="Login"
+            onclick="window.location.href='login.html'"
+          >
+            <img src="../assest/user.gif" alt="User" class="tool-items" />
+          </button>
+        </div>
+      </div>
+      <div class="navbar-menu">
+        <ul>
+          <li>
+            <a href="new_arrivals.html" class="activated">New arrivals</a>
+          </li>
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="kids.html">Kids</a></li>
+          <li><a href="watch.html">Watch</a></li>
+          <li><a href="toys.html">Toys</a></li>
+          <li><a href="gift.html">Gifts</a></li>
+          <li><a href="sale.html">Sale</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="empty"></div>
+
+    <section class="container mt-5">
+      <div class="h4 pb-2 mb-4 border-bottom border-3">NEW ARRIVALS</div>
+      <div class="row row-cols-1 row-cols-md-5 g-4">
+        <script>
+          const items = [
+            {
+              id: 1,
+              title: "VENOM Women's Crew Neck Cotton T-Shirt Dark Beige",
+              price: "LKR 990.00",
+              image: "../assest/new_arrivals/1.avif",
+            },
+            {
+              id: 2,
+              title: "VENOM Women's Crew Neck Cotton T-Shirt Mint Green",
+              price: "LKR 990.00",
+              image: "../assest/new_arrivals/2.avif",
+            },
+            {
+              id: 3,
+              title: "VENOM Women's Crew Neck Cotton T-Shirt Light Purple",
+              price: "LKR 990.00",
+              image: "../assest/new_arrivals/3.avif",
+            },
+            {
+              id: 4,
+              title: "VENOM Women's Crew Neck Cotton T-Shirt Black",
+              price: "LKR 990.00",
+              image: "../assest/new_arrivals/4.avif",
+            },
+            {
+              id: 5,
+              title: "VENOM Women's Crew Neck Cotton T-Shirt Soft Pink",
+              price: "LKR 990.00",
+              image: "../assest/new_arrivals/5.avif",
+            },
+            {
+              id: 6,
+              title: "VENOM Women's Crew Neck Cotton T-Shirt Emerald Green",
+              price: "LKR 990.00",
+              image: "../assest/new_arrivals/6.avif",
+            },
+            {
+              id: 7,
+              title:
+                "HUF & DEE VARSITY Women's V Neck Puff Print Crop T-Shirt White",
+              price: "LKR 2,690.00",
+              image: "../assest/new_arrivals/7.avif",
+            },
+            {
+              id: 8,
+              title:
+                "HUF & DEE VARSITY Women's V Neck Puff Print Crop T-Shirt Pink",
+              price: "LKR 2,690.00",
+              image: "../assest/new_arrivals/8.avif",
+            },
+            {
+              id: 9,
+              title: "King Street TIMELESS Men's Casual Shirt",
+              price: "LKR 7,590.00",
+              image: "../assest/new_arrivals/9.webp",
+            },
+            {
+              id: 10,
+              title: "King Street TIMELESS Men's Casual Shirt",
+              price: "LKR 7,590.00",
+              image: "../assest/new_arrivals/10.webp",
+            },
+            {
+              id: 11,
+              title: "King Street TIMELESS Men's Casual Shirt",
+              price: "LKR 7,590.00",
+              image: "../assest/new_arrivals/11.webp",
+            },
+            {
+              id: 12,
+              title: "King Street TIMELESS Men's Casual Shirt",
+              price: "LKR 7,590.00",
+              image: "../assest/new_arrivals/12.webp",
+            },
+            {
+              id: 13,
+              title: "Hustle Relax Fit Casual T-Shirt",
+              price: "LKR 2,750.00",
+              image: "../assest/new_arrivals/13.webp",
+            },
+            {
+              id: 14,
+              title: "Hustle Relax Fit Casual T-Shirt",
+              price: "LKR 2,650.00",
+              image: "../assest/new_arrivals/14.webp",
+            },
+            {
+              id: 15,
+              title: "King Street HERITAGE Men's Casual Polo T-Shirt",
+              price: "LKR 4,990.00",
+              image: "../assest/new_arrivals/15.webp",
+            },
+          ];
+
+          items.forEach((item) => {
+            document.write(`
+              <div class="col position-relative">
+                <div class="card h-100 hover-div">
+                    <img src="${item.image}" class="card-img-top" alt="${item.image}">
+                    <span class="position-absolute translate-middle badge bg-primary my-badge">NEW</span>
+                    <div class="card-body"><h5 class="card-title">${item.price}</h5></div>
+                    <p class="card-text px-3">${item.title}</p>
+                    <div class="card-footer text-end">
+                      <button class="btn me-2"><img src="../assest/Heart.gif" alt="Cart" class="tool-items" /></button>
+                      <a href="#" class="btn btn-primary px-3">READ MORE</a>
+                    </div>
+                </div>
+              </div>
+            `);
+          });
+        </script>
+      </div>
+    </section>
+
+    <section class="footer">
+      <footer>
+        <div class="footer-page">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col m-3"></div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <img
+                  src="D:/RUSL/Second Year/My/ICT2204-Web Technologies/Project/Web/assest/Venom-icon.png"
+                  alt="Logo"
+                  width="250px"
+                />
+                <p class="my-para">
+                  Venom Apparel is more than just a clothing brand it's a
+                  lifestyle. Designed for individuals who thrive on energy,
+                  strength, and self-expression, Venom Apparel blends bold
+                  aesthetics with high-performance functionality. Whether you're
+                  conquering the gym, dominating the streets, or making a
+                  fashion statement, Venom Apparel has something for everyone.
+                </p>
+                <div class="links">
+                  <a href="http://instagram.com" title="instagram"
+                    ><img
+                      src="D:/RUSL/Second Year/My/ICT2204-Web Technologies/Project/Web/assest/instagram.svg"
+                      alt="instagram"
+                      class="s-link"
+                  /></a>
+                  <a href="http://facebook.com" title="facebook"
+                    ><img
+                      src="D:/RUSL/Second Year/My/ICT2204-Web Technologies/Project/Web/assest/facebook.svg"
+                      alt="facebook"
+                      class="s-link"
+                  /></a>
+                  <a href="http://twitter.com" title="twitter"
+                    ><img
+                      src="D:/RUSL/Second Year/My/ICT2204-Web Technologies/Project/Web/assest/twitter.svg"
+                      alt="twitter"
+                      class="s-link"
+                  /></a>
+                </div>
+              </div>
+              <div class="col content">
+                <h5>INFORMATION</h5>
+                <ul>
+                  <li><a href="../pages/faq.html">FAQ</a></li>
+                  <li><a href="../pages/about_us.html">About Us</a></li>
+                  <li>
+                    <a href="../pages/privacy_policy.html">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="../pages/terms_conditions.html"
+                      >Terms & Conditions</a
+                    >
+                  </li>
+                  <li><a href="../pages/delivery.html">Delivery Details</a></li>
+                  <li>
+                    <a href="../pages/return_policy.html">Return Policy</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col content">
+                <h5>GET IN TOUCH</h5>
+                <p>
+                  <u>Online Store</u><br />
+                  No.10,<br />
+                  Kawdana Road,<br />
+                  Dehiwala.<br />
+                  077 3540 816 <br />
+                  care@venomapparel.lk <br /><br />
+                  <u>Head Office</u> <br />
+                  No.18,<br />
+                  Kawdana Road,<br />
+                  Dehiwala. <br />
+                  0112 737 441 <br />
+                  info@venomapparel.lk <br />
+                  <br /><br />
+                  Mon-Fri : 8.30 AM to 6.30 PM <br />
+                  Saturday : 8.30 AM to 1.30 PM <br />
+                  Sunday : Closed <br />
+                </p>
+              </div>
+              <div class="col content">
+                <h5>Subscribe to newsletter</h5>
+                <form>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Enter your email here"
+                      required
+                    />
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-secondary" type="submit">
+                      Subscribe
+                    </button>
+                  </div>
+                </form>
+                <p class="my-para">
+                  By subscribing, you agree to receive recurring automated
+                  promotional and personalized marketing emails (e.g. cart
+                  reminders) from us at the email used when subscribing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p class="water-mark">
+          © 2024 VENOM APPARELS All rights reserved. Powered by ROOTCODE
+        </p>
+      </footer>
+    </section>
+    <script src="../bootstrap.js"></script>
+  </body>
+</html>

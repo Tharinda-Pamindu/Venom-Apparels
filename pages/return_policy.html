@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venom</title>
+    <link rel="icon" href="../assest/venom.svg" />
+    <link rel="stylesheet" href="../bootstrap.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <section class="navigation-bar">
+      <div class="navbar">
+        <div class="logo">
+          <a href="../index.html">
+            <img
+              src="../assest/Venom_logo.png"
+              alt="Brand Logo"
+              class="brand-logo"
+            />
+          </a>
+        </div>
+        <div class="search-bar-tool">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control search-bar"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn search-btn-icon" type="submit">
+              <img src="../assest/search.svg" alt="Search" />
+            </button>
+          </form>
+        </div>
+        <div class="tools">
+          <button class="btn me-2"><img src="../assest/Heart.gif" alt="Cart" class="tool-items" /></button>
+          <button class="btn">
+            <img src="../assest/cart.gif" alt="Cart" class="tool-items" />
+          </button>
+          <button class="btn">
+            <img src="../assest/user.gif" alt="User" class="tool-items" />
+          </button>
+        </div>
+      </div>
+      <div class="navbar-menu">
+        <ul>
+          <li><a href="new_arrivals.html">New arrivals</a></li>
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="kids.html">Kids</a></li>
+          <li><a href="watch.html">Watch</a></li>
+          <li><a href="toys.html">Toys</a></li>
+          <li><a href="gift.html">Gifts</a></li>
+          <li><a href="sale.html">Sale</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="empty"></div>
+
+    <section>
+      <div class="container">
+        <h1 class="m-4">Return Policy</h1>
+
+        <script>
+          const returnPolicy = [
+            {
+              id: 1,
+              title: "Eligibility for Returns",
+              content:
+                "Items must be returned within 30 days from the date of purchase. Products must be in their original condition, unused, unwashed, and with all tags and packaging intact. Items purchased during sales, promotions, or marked as 'Final Sale' are not eligible for returns.",
+            },
+            {
+              id: 2,
+              title: "Steps to Initiate a Return",
+              content:
+                "1. Contact our customer support team at returns@venomapparel.com or call (123) 456-7890 to request a return.\n2. Provide your order number, reason for return, and any relevant photos (if applicable).\n3. Once your return request is approved, you will receive detailed instructions and a return shipping label (if applicable).",
+            },
+            {
+              id: 3,
+              title: "Return Shipping Costs",
+              content:
+                "For defective or incorrect items, Venom Apparel will cover the return shipping costs. For other returns (e.g., size or preference changes), the customer is responsible for return shipping fees.",
+            },
+            {
+              id: 4,
+              title: "Refunds",
+              content:
+                "Refunds will be processed within 7-10 business days after we receive and inspect the returned items. Refunds will be issued to the original payment method. Shipping charges from the original order are non-refundable.",
+            },
+            {
+              id: 5,
+              title: "Exchanges",
+              content:
+                "Exchanges are available for size or color changes, subject to product availability. To ensure faster processing, we recommend placing a new order for the desired item and returning the original.",
+            },
+            {
+              id: 6,
+              title: "Non-Returnable Items",
+              content:
+                "Gift cards, personalized items, and undergarments are not eligible for returns. Items showing signs of use, damage, or tampering will not be accepted.",
+            },
+            {
+              id: 7,
+              title: "Damaged or Defective Products",
+              content:
+                "If you receive a damaged or defective product, contact our customer support team immediately with your order details and photos of the product. We will arrange a replacement or refund based on your preference.",
+            },
+          ];
+
+
+          document.write(`<div class="accordion accordion-flush" id="accordionFlushExample">`);
+          
+          returnPolicy.forEach(policy =>{
+            document.write(`
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${policy.id}" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <h6>${policy.title}</h6>
+                  </button>
+                </h2>
+                <div id="flush-collapse${policy.id}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">${policy.content}</div>
+                </div>
+              </div>
+            `);
+          });
+
+          document.write(`</div>`);
+
+
+        </script>
+      </div>
+    </section>
+
+    <section class="footer">
+      <footer>
+        <div class="footer-page">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col m-3"></div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <img src="../assest/Venom-icon.png" alt="Logo" width="250px" />
+                <p class="my-para">
+                  Venom Apparel is more than just a clothing brand it's a
+                  lifestyle. Designed for individuals who thrive on energy,
+                  strength, and self-expression, Venom Apparel blends bold
+                  aesthetics with high-performance functionality. Whether you're
+                  conquering the gym, dominating the streets, or making a
+                  fashion statement, Venom Apparel has something for everyone.
+                </p>
+                <div class="links">
+                  <a href="http://instagram.com" title="instagram"
+                    ><img
+                      src="../assest/instagram.svg"
+                      alt="instagram"
+                      class="s-link"
+                  /></a>
+                  <a href="http://facebook.com" title="facebook"
+                    ><img
+                      src="../assest/facebook.svg"
+                      alt="facebook"
+                      class="s-link"
+                  /></a>
+                  <a href="http://twitter.com" title="twitter"
+                    ><img
+                      src="../assest/twitter.svg"
+                      alt="twitter"
+                      class="s-link"
+                  /></a>
+                </div>
+              </div>
+              <div class="col content">
+                <h5>INFORMATION</h5>
+                <ul>
+                  <li><a href="../pages/faq.html">FAQ</a></li>
+                  <li><a href="../pages/about_us.html">About Us</a></li>
+                  <li>
+                    <a href="../pages/privacy_policy.html">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="../pages/terms_conditions.html"
+                      >Terms & Conditions</a
+                    >
+                  </li>
+                  <li><a href="../pages/delivery.html">Delivery Details</a></li>
+                  <li>
+                    <a href="../pages/return_policy.html">Return Policy</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col content">
+                <h5>GET IN TOUCH</h5>
+                <p>
+                  <u>Online Store</u><br />
+                  No.10,<br />
+                  Kawdana Road,<br />
+                  Dehiwala.<br />
+                  077 3540 816 <br />
+                  care@venomapparel.lk <br /><br />
+                  <u>Head Office</u> <br />
+                  No.18,<br />
+                  Kawdana Road,<br />
+                  Dehiwala. <br />
+                  0112 737 441 <br />
+                  info@venomapparel.lk <br />
+                  <br /><br />
+                  Mon-Fri : 8.30 AM to 6.30 PM <br />
+                  Saturday : 8.30 AM to 1.30 PM <br />
+                  Sunday : Closed <br />
+                </p>
+              </div>
+              <div class="col content">
+                <h5>Subscribe to newsletter</h5>
+                <form>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Enter your email here"
+                      required
+                    />
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="submit">
+                      Subscribe
+                    </button>
+                  </div>
+                </form>
+                <p class="my-para">
+                  By subscribing, you agree to receive recurring automated
+                  promotional and personalized marketing emails (e.g. cart
+                  reminders) from us at the email used when subscribing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p class="water-mark">
+          © 2024 VENOM APPARELS All rights reserved. Powered by ROOTCODE
+        </p>
+      </footer>
+    </section>
+    <script src="../bootstrap.js"></script>
+  </body>
+</html>

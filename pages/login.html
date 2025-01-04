@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venom</title>
+    <link rel="icon" href="../assest/venom.svg" />
+    <link rel="stylesheet" href="../bootstrap.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <section class="navigation-bar">
+      <div class="navbar">
+        <div class="logo">
+          <a href="../index.html">
+            <img
+              src="../assest/Venom_logo.png"
+              alt="Brand Logo"
+              class="brand-logo"
+            />
+          </a>
+        </div>
+        <div class="search-bar-tool">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control search-bar"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn search-btn-icon" type="submit">
+              <img src="../assest/search.svg" alt="Search" />
+            </button>
+          </form>
+        </div>
+        <div class="tools">
+          <button class="btn" title="WishList">
+            <img src="../assest/Heart.gif" alt="Cart" class="tool-items" />
+          </button>
+          <button class="btn" title="Cart">
+            <img src="../assest/cart.gif" alt="Cart" class="tool-items" />
+          </button>
+          <button class="btn" title="Login" onclick="window.location.href='login.html'">
+            <img src="../assest/user.gif" alt="User" class="tool-items" />
+          </button>
+        </div>
+      </div>
+      <div class="navbar-menu">
+        <ul>
+          <li><a href="new_arrivals.html">New arrivals</a></li>
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="kids.html">Kids</a></li>
+          <li><a href="watch.html">Watch</a></li>
+          <li><a href="toys.html">Toys</a></li>
+          <li><a href="gift.html">Gifts</a></li>
+          <li><a href="sale.html">Sale</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="empty"></div>
+    <br /><br />
+
+    <section>
+      <div class="container text-center login-form">
+        <div class="row">
+          <div class="col-6 remove-padding">
+            <img src="../assest/Hello.png" alt="" class="login-image" />
+          </div>
+          <div class="col-6 my-form">
+            <!-- Form -->
+            <h3 class="mb-5 text-primary">Sign In</h3>
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control shadow ps-3 border border-3 border-primary"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput" class="ms-3 text-primary"
+                  >Email address</label
+                >
+              </div>
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control shadow ps-3 border border-3 border-primary"
+                  id="floatingPassword"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword" class="ms-3 text-primary"
+                  >Password</label
+                >
+              </div>
+              <a href="#">Forgot password?</a>
+              <div class="d-grid gap-2 mt-4">
+                <button class="btn btn-primary p-2 shadow-lg" type="submit">
+                  Sign In
+                </button>
+              </div>
+              <div>
+                Don’t have an account?<a href="signup.html"> Sign Up</a> now
+              </div>
+              <hr class="mt-4" />
+              <div class="fw-bold">OR</div>
+              <div class="g-4">
+                <a href="#" class="m-4"
+                  ><img src="../assest/google-logo.svg" alt="Google"
+                /></a>
+                <a href="#" class="m-4"
+                  ><img src="../assest/facebook-logo.svg" alt="facebook"
+                /></a>
+                <a href="#" class="m-4"
+                  ><img src="../assest/twitter-logo.svg" alt="twitter"
+                /></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <footer>
+        <div class="footer-page">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col m-3"></div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <img src="../assest/Venom-icon.png" alt="Logo" width="250px" />
+                <p class="my-para">
+                  Venom Apparel is more than just a clothing brand it's a
+                  lifestyle. Designed for individuals who thrive on energy,
+                  strength, and self-expression, Venom Apparel blends bold
+                  aesthetics with high-performance functionality. Whether you're
+                  conquering the gym, dominating the streets, or making a
+                  fashion statement, Venom Apparel has something for everyone.
+                </p>
+                <div class="links">
+                  <a href="http://instagram.com" title="instagram"
+                    ><img
+                      src="../assest/instagram.svg"
+                      alt="instagram"
+                      class="s-link"
+                  /></a>
+                  <a href="http://facebook.com" title="facebook"
+                    ><img
+                      src="../assest/facebook.svg"
+                      alt="facebook"
+                      class="s-link"
+                  /></a>
+                  <a href="http://twitter.com" title="twitter"
+                    ><img
+                      src="../assest/twitter.svg"
+                      alt="twitter"
+                      class="s-link"
+                  /></a>
+                </div>
+              </div>
+              <div class="col content">
+                <h5>INFORMATION</h5>
+                <ul>
+                  <li><a href="../pages/faq.html">FAQ</a></li>
+                  <li><a href="../pages/about_us.html">About Us</a></li>
+                  <li>
+                    <a href="../pages/privacy_policy.html">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="../pages/terms_conditions.html"
+                      >Terms & Conditions</a
+                    >
+                  </li>
+                  <li><a href="../pages/delivery.html">Delivery Details</a></li>
+                  <li>
+                    <a href="../pages/return_policy.html">Return Policy</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col content">
+                <h5>GET IN TOUCH</h5>
+                <p>
+                  <u>Online Store</u><br />
+                  No.10,<br />
+                  Kawdana Road,<br />
+                  Dehiwala.<br />
+                  077 3540 816 <br />
+                  care@venomapparel.lk <br /><br />
+                  <u>Head Office</u> <br />
+                  No.18,<br />
+                  Kawdana Road,<br />
+                  Dehiwala. <br />
+                  0112 737 441 <br />
+                  info@venomapparel.lk <br />
+                  <br /><br />
+                  Mon-Fri : 8.30 AM to 6.30 PM <br />
+                  Saturday : 8.30 AM to 1.30 PM <br />
+                  Sunday : Closed <br />
+                </p>
+              </div>
+              <div class="col content">
+                <h5>Subscribe to newsletter</h5>
+                <form>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Enter your email here"
+                      required
+                    />
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-secondary" type="submit">
+                      Subscribe
+                    </button>
+                  </div>
+                </form>
+                <p class="my-para">
+                  By subscribing, you agree to receive recurring automated
+                  promotional and personalized marketing emails (e.g. cart
+                  reminders) from us at the email used when subscribing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p class="water-mark">
+          © 2024 VENOM APPARELS All rights reserved. Powered by ROOTCODE
+        </p>
+      </footer>
+    </section>
+    <script src="../bootstrap.js"></script>
+  </body>
+</html>
