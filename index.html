@@ -1,212 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Venom</title>
-    <link rel="icon" href="assest/venom.svg" />
-    <link rel="stylesheet" href="bootstrap.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section class="navigation-bar">
-      <div class="navbar">
-        <div class="logo">
-          <a href="index.html">
-            <img
-              src="assest/Venom_logo.png"
-              alt="Brand Logo"
-              class="brand-logo"
-            />
-          </a>
-        </div>
-        <div class="search-bar-tool">
-          <form class="d-flex" role="search">
-            <input
-              class="form-control search-bar"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn search-btn-icon" type="submit">
-              <img src="assest/search.svg" alt="Search" />
-            </button>
-          </form>
-        </div>
-        <div class="tools">
-          <button
-            class="btn"
-            title="WishList"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#staticBackdrop"
-            aria-controls="staticBackdrop"
-            onclick="display()"
-          >
-            <img src="assest/Heart.gif" alt="WishList" class="tool-items" />
-          </button>
-          <button class="btn" title="Cart">
-            <img src="assest/cart.gif" alt="Cart" class="tool-items" />
-          </button>
-          <button class="btn" onclick="gotoLogin()" title="Login">
-            <img src="assest/user.gif" alt="User" class="tool-items" />
-          </button>
-        </div>
-      </div>
-      <div class="navbar-menu">
-        <ul>
-          <li><a href="pages/new_arrivals.html">New arrivals</a></li>
-          <li><a href="pages/men.html">Men</a></li>
-          <li><a href="pages/women.html">Women</a></li>
-          <li><a href="pages/kids.html">Kids</a></li>
-          <li><a href="pages/watch.html">Watch</a></li>
-          <li><a href="pages/toys.html">Toys</a></li>
-          <li><a href="pages/gift.html">Gifts</a></li>
-          <li><a href="pages/sale.html">Sale</a></li>
-        </ul>
-      </div>
-    </section>
 
-    <div
-      class="offcanvas offcanvas-start"
-      data-bs-backdrop="static"
-      tabindex="-1"
-      id="staticBackdrop"
-      aria-labelledby="staticBackdropLabel"
-    >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="staticBackdropLabel">WishList</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venom</title>
+  <link rel="icon" href="assest/venom.svg" />
+  <link rel="stylesheet" href="bootstrap.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <section class="navigation-bar">
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assest/Venom_logo.png" alt="Brand Logo" class="brand-logo" />
+        </a>
       </div>
-      <div class="offcanvas-body">
-        <div id="wishlist-items"></div>
+      <div class="search-bar-tool">
+        <form class="d-flex" role="search">
+          <input class="form-control search-bar" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn search-btn-icon" type="submit">
+            <img src="assest/search.svg" alt="Search" />
+          </button>
+        </form>
+      </div>
+      <div class="tools">
+        <button class="btn" title="WishList" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+          aria-controls="staticBackdrop" onclick="display()">
+          <img src="assest/Heart.gif" alt="WishList" class="tool-items" />
+        </button>
+        <button class="btn" title="Cart">
+          <img src="assest/cart.gif" alt="Cart" class="tool-items" />
+        </button>
+        <button class="btn" onclick="gotoLogin()" title="Login">
+          <img src="assest/user.gif" alt="User" class="tool-items" />
+        </button>
       </div>
     </div>
+    <div class="navbar-menu">
+      <ul>
+        <li><a href="pages/new_arrivals.html">New arrivals</a></li>
+        <li><a href="pages/men.html">Men</a></li>
+        <li><a href="pages/women.html">Women</a></li>
+        <li><a href="pages/kids.html">Kids</a></li>
+        <li><a href="pages/watch.html">Watch</a></li>
+        <li><a href="pages/toys.html">Toys</a></li>
+        <li><a href="pages/gift.html">Gifts</a></li>
+        <li><a href="pages/sale.html">Sale</a></li>
+      </ul>
+    </div>
+  </section>
 
-    <section class="body-section">
-      <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="3"
-            aria-label="Slide 4"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="4"
-            aria-label="Slide 5"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assest/image7.webp" class="d-block w-100" alt="Image 1" />
-          </div>
-          <div class="carousel-item active">
-            <img src="assest/image7.webp" class="d-block w-100" alt="Image 1" />
-          </div>
-          <div class="carousel-item active">
-            <img src="assest/image7.webp" class="d-block w-100" alt="Image 1" />
-          </div>
-          <div class="carousel-item active">
-            <img src="assest/image7.webp" class="d-block w-100" alt="Image 1" />
-          </div>
-          <div class="carousel-item active">
-            <img src="assest/image7.webp" class="d-block w-100" alt="Image 1" />
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleRide"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleRide"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+  <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+    aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="staticBackdropLabel">WishList</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="wishlist-items"></div>
+    </div>
+  </div>
+
+  <section class="body-section">
+    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+          aria-label="Slide 5"></button>
       </div>
-    </section>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assest/image7.webp" class="d-block w-100" alt="Image 1" />
+        </div>
+        <div class="carousel-item active">
+          <img src="assest/image7.webp" class="d-block w-100" alt="Image 1" />
+        </div>
+        <div class="carousel-item active">
+          <img src="assest/image7.webp" class="d-block w-100" alt="Image 1" />
+        </div>
+        <div class="carousel-item active">
+          <img src="assest/image7.webp" class="d-block w-100" alt="Image 1" />
+        </div>
+        <div class="carousel-item active">
+          <img src="assest/image7.webp" class="d-block w-100" alt="Image 1" />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
 
-    <div class="empty"></div>
+  <div class="empty"></div>
 
-    <section class="container mt-5">
-      <!-- <script>
-        const new_arrivals = [
-          {
-            id: 1,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Dark Beige",
-            price: "LKR 990.00",
-            image: "assest/new_arrivals/1.avif",
-          },
-          {
-            id: 2,
-            title:
-              "HUF & DEE VARSITY Women's V Neck Puff Print Crop T-Shirt White",
-            price: "LKR 2,690.00",
-            image: "assest/new_arrivals/7.avif",
-          },
-          {
-            id: 3,
-            title: "King Street HERITAGE Men's Casual Polo T-Shirt",
-            price: "LKR 4,990.00",
-            image: "assest/new_arrivals/15.webp",
-          },
-          {
-            id: 4,
-            title: "King Street TIMELESS Men's Casual Shirt",
-            price: "LKR 7,590.00",
-            image: "assest/new_arrivals/12.webp",
-          },
-          {
-            id: 5,
-            title: "Hustle Relax Fit Casual T-Shirt",
-            price: "LKR 2,750.00",
-            image: "assest/new_arrivals/13.webp",
-          },
-        ];
+  <section class="container mt-5">
+    <!-- <script>
+      const new_arrivals = [
+        {
+          id: 1,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Dark Beige",
+          price: "LKR 990.00",
+          image: "assest/new_arrivals/1.avif",
+        },
+        {
+          id: 2,
+          title:
+            "HUF & DEE VARSITY Women's V Neck Puff Print Crop T-Shirt White",
+          price: "LKR 2,690.00",
+          image: "assest/new_arrivals/7.avif",
+        },
+        {
+          id: 3,
+          title: "King Street HERITAGE Men's Casual Polo T-Shirt",
+          price: "LKR 4,990.00",
+          image: "assest/new_arrivals/15.webp",
+        },
+        {
+          id: 4,
+          title: "King Street TIMELESS Men's Casual Shirt",
+          price: "LKR 7,590.00",
+          image: "assest/new_arrivals/12.webp",
+        },
+        {
+          id: 5,
+          title: "Hustle Relax Fit Casual T-Shirt",
+          price: "LKR 2,750.00",
+          image: "assest/new_arrivals/13.webp",
+        },
+      ];
 
-        document.write(
-          `<div class="h4 pb-2 mb-4 border-bottom border-3">NEW ARRIVALS</div>`
-        );
-        document.write(`<div class="row row-cols-1 row-cols-md-5 g-4">`);
+      document.write(
+        `<div class="h4 pb-2 mb-4 border-bottom border-3">NEW ARRIVALS</div>`
+      );
+      document.write(`<div class="row row-cols-1 row-cols-md-5 g-4">`);
 
-        new_arrivals.forEach((item) => {
-          document.write(`
+      new_arrivals.forEach((item) => {
+        document.write(`
               <div class="col position-relative">
                 <div class="card h-100 hover-div">
                     <img src="${item.image}" class="card-img-top" alt="${item.image}">
@@ -220,50 +164,50 @@
                 </div>
               </div>
             `);
-        });
+      });
 
-        document.write(`</div>`);
+      document.write(`</div>`);
 
-        const men = [
-          {
-            id: 1,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Emerald Green",
-            price: "LKR 990.00",
-            image: "assest/men/1.avif",
-          },
-          {
-            id: 2,
-            title: "HUF & DEE VARSITY Women's V Neck Puff Print Crop T-Shirt",
-            price: "LKR 2,690.00",
-            image: "assest/men/7.avif",
-          },
-          {
-            id: 3,
-            title: "King Street HERITAGE Men's Casual Polo T-Shirt",
-            price: "LKR 4,990.00",
-            image: "assest/new_arrivals/15.webp",
-          },
-          {
-            id: 4,
-            title: "King Street TIMELESS Men's Casual Shirt",
-            price: "LKR 7,590.00",
-            image: "assest/new_arrivals/12.webp",
-          },
-          {
-            id: 5,
-            title: "Hustle Relax Fit Casual T-Shirt",
-            price: "LKR 2,750.00",
-            image: "assest/new_arrivals/13.webp",
-          },
-        ];
+      const men = [
+        {
+          id: 1,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Emerald Green",
+          price: "LKR 990.00",
+          image: "assest/men/1.avif",
+        },
+        {
+          id: 2,
+          title: "HUF & DEE VARSITY Women's V Neck Puff Print Crop T-Shirt",
+          price: "LKR 2,690.00",
+          image: "assest/men/7.avif",
+        },
+        {
+          id: 3,
+          title: "King Street HERITAGE Men's Casual Polo T-Shirt",
+          price: "LKR 4,990.00",
+          image: "assest/new_arrivals/15.webp",
+        },
+        {
+          id: 4,
+          title: "King Street TIMELESS Men's Casual Shirt",
+          price: "LKR 7,590.00",
+          image: "assest/new_arrivals/12.webp",
+        },
+        {
+          id: 5,
+          title: "Hustle Relax Fit Casual T-Shirt",
+          price: "LKR 2,750.00",
+          image: "assest/new_arrivals/13.webp",
+        },
+      ];
 
-        document.write(
-          `<div class="h4 pb-2 mb-4 border-bottom border-3 mt-5">MEN</div>`
-        );
-        document.write(`<div class="row row-cols-1 row-cols-md-5 g-4">`);
+      document.write(
+        `<div class="h4 pb-2 mb-4 border-bottom border-3 mt-5">MEN</div>`
+      );
+      document.write(`<div class="row row-cols-1 row-cols-md-5 g-4">`);
 
-        men.forEach((item) => {
-          document.write(`
+      men.forEach((item) => {
+        document.write(`
               <div class="col position-relative">
                 <div class="card h-100 hover-div">
                     <img src="${item.image}" class="card-img-top" alt="${item.image}">
@@ -276,50 +220,50 @@
                 </div>
               </div>
             `);
-        });
+      });
 
-        document.write(`</div>`);
+      document.write(`</div>`);
 
-        const women = [
-          {
-            id: 1,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Dark Beige",
-            price: "LKR 990.00",
-            image: "assest/women/1.avif",
-          },
-          {
-            id: 2,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Mint Green",
-            price: "LKR 990.00",
-            image: "assest/women/2.avif",
-          },
-          {
-            id: 3,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Light Purple",
-            price: "LKR 990.00",
-            image: "assest/women/3.avif",
-          },
-          {
-            id: 4,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Black",
-            price: "LKR 990.00",
-            image: "assest/women/4.avif",
-          },
-          {
-            id: 5,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Soft Pink",
-            price: "LKR 990.00",
-            image: "assest/women/5.avif",
-          },
-        ];
+      const women = [
+        {
+          id: 1,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Dark Beige",
+          price: "LKR 990.00",
+          image: "assest/women/1.avif",
+        },
+        {
+          id: 2,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Mint Green",
+          price: "LKR 990.00",
+          image: "assest/women/2.avif",
+        },
+        {
+          id: 3,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Light Purple",
+          price: "LKR 990.00",
+          image: "assest/women/3.avif",
+        },
+        {
+          id: 4,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Black",
+          price: "LKR 990.00",
+          image: "assest/women/4.avif",
+        },
+        {
+          id: 5,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Soft Pink",
+          price: "LKR 990.00",
+          image: "assest/women/5.avif",
+        },
+      ];
 
-        document.write(
-          `<div class="h4 pb-2 mb-4 border-bottom border-3 mt-5">WOMEN</div>`
-        );
-        document.write(`<div class="row row-cols-1 row-cols-md-5 g-4">`);
+      document.write(
+        `<div class="h4 pb-2 mb-4 border-bottom border-3 mt-5">WOMEN</div>`
+      );
+      document.write(`<div class="row row-cols-1 row-cols-md-5 g-4">`);
 
-        women.forEach((item) => {
-          document.write(`
+      women.forEach((item) => {
+        document.write(`
               <div class="col position-relative">
                 <div class="card h-100 hover-div">
                     <img src="${item.image}" class="card-img-top" alt="${item.image}">
@@ -332,50 +276,50 @@
                 </div>
               </div>
             `);
-        });
+      });
 
-        document.write(`</div>`);
+      document.write(`</div>`);
 
-        const kids = [
-          {
-            id: 1,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Dark Beige",
-            price: "LKR 990.00",
-            image: "assest/kids/1.avif",
-          },
-          {
-            id: 2,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Mint Green",
-            price: "LKR 990.00",
-            image: "assest/kids/2.avif",
-          },
-          {
-            id: 3,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Light Purple",
-            price: "LKR 990.00",
-            image: "assest/kids/3.avif",
-          },
-          {
-            id: 4,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Black",
-            price: "LKR 990.00",
-            image: "assest/kids/4.avif",
-          },
-          {
-            id: 5,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Soft Pink",
-            price: "LKR 990.00",
-            image: "assest/kids/5.avif",
-          },
-        ];
+      const kids = [
+        {
+          id: 1,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Dark Beige",
+          price: "LKR 990.00",
+          image: "assest/kids/1.avif",
+        },
+        {
+          id: 2,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Mint Green",
+          price: "LKR 990.00",
+          image: "assest/kids/2.avif",
+        },
+        {
+          id: 3,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Light Purple",
+          price: "LKR 990.00",
+          image: "assest/kids/3.avif",
+        },
+        {
+          id: 4,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Black",
+          price: "LKR 990.00",
+          image: "assest/kids/4.avif",
+        },
+        {
+          id: 5,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Soft Pink",
+          price: "LKR 990.00",
+          image: "assest/kids/5.avif",
+        },
+      ];
 
-        document.write(
-          `<div class="h4 pb-2 mb-4 border-bottom border-3 mt-5">KIDS</div>`
-        );
-        document.write(`<div class="row row-cols-1 row-cols-md-5 g-4">`);
+      document.write(
+        `<div class="h4 pb-2 mb-4 border-bottom border-3 mt-5">KIDS</div>`
+      );
+      document.write(`<div class="row row-cols-1 row-cols-md-5 g-4">`);
 
-        kids.forEach((item) => {
-          document.write(`
+      kids.forEach((item) => {
+        document.write(`
               <div class="col position-relative">
                 <div class="card h-100 hover-div">
                     <img src="${item.image}" class="card-img-top" alt="${item.image}">
@@ -388,50 +332,50 @@
                 </div>
               </div>
             `);
-        });
+      });
 
-        document.write(`</div>`);
+      document.write(`</div>`);
 
-        const watch = [
-          {
-            id: 1,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Dark Beige",
-            price: "LKR 990.00",
-            image: "assest/watch/1.avif",
-          },
-          {
-            id: 2,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Mint Green",
-            price: "LKR 990.00",
-            image: "assest/watch/2.avif",
-          },
-          {
-            id: 3,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Light Purple",
-            price: "LKR 990.00",
-            image: "assest/watch/3.avif",
-          },
-          {
-            id: 4,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Black",
-            price: "LKR 990.00",
-            image: "assest/watch/4.avif",
-          },
-          {
-            id: 5,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Soft Pink",
-            price: "LKR 990.00",
-            image: "assest/watch/5.avif",
-          },
-        ];
+      const watch = [
+        {
+          id: 1,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Dark Beige",
+          price: "LKR 990.00",
+          image: "assest/watch/1.avif",
+        },
+        {
+          id: 2,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Mint Green",
+          price: "LKR 990.00",
+          image: "assest/watch/2.avif",
+        },
+        {
+          id: 3,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Light Purple",
+          price: "LKR 990.00",
+          image: "assest/watch/3.avif",
+        },
+        {
+          id: 4,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Black",
+          price: "LKR 990.00",
+          image: "assest/watch/4.avif",
+        },
+        {
+          id: 5,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Soft Pink",
+          price: "LKR 990.00",
+          image: "assest/watch/5.avif",
+        },
+      ];
 
-        document.write(
-          `<div class="h4 pb-2 mb-4 border-bottom border-3 mt-5">WATCH</div>`
-        );
-        document.write(`<div class="row row-cols-1 row-cols-md-5 g-4">`);
+      document.write(
+        `<div class="h4 pb-2 mb-4 border-bottom border-3 mt-5">WATCH</div>`
+      );
+      document.write(`<div class="row row-cols-1 row-cols-md-5 g-4">`);
 
-        watch.forEach((item) => {
-          document.write(`
+      watch.forEach((item) => {
+        document.write(`
               <div class="col position-relative">
                 <div class="card h-100 hover-div">
                     <img src="${item.image}" class="card-img-top" alt="${item.image}">
@@ -444,50 +388,50 @@
                 </div>
               </div>
             `);
-        });
+      });
 
-        document.write(`</div>`);
+      document.write(`</div>`);
 
-        const sale = [
-          {
-            id: 1,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Dark Beige",
-            price: "LKR 990.00",
-            image: "assest/sale/1.avif",
-          },
-          {
-            id: 2,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Mint Green",
-            price: "LKR 990.00",
-            image: "assest/sale/2.avif",
-          },
-          {
-            id: 3,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Light Purple",
-            price: "LKR 990.00",
-            image: "assest/sale/3.avif",
-          },
-          {
-            id: 4,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Black",
-            price: "LKR 990.00",
-            image: "assest/sale/4.avif",
-          },
-          {
-            id: 5,
-            title: "VENOM Women's Crew Neck Cotton T-Shirt Soft Pink",
-            price: "LKR 990.00",
-            image: "assest/sale/5.avif",
-          },
-        ];
+      const sale = [
+        {
+          id: 1,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Dark Beige",
+          price: "LKR 990.00",
+          image: "assest/sale/1.avif",
+        },
+        {
+          id: 2,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Mint Green",
+          price: "LKR 990.00",
+          image: "assest/sale/2.avif",
+        },
+        {
+          id: 3,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Light Purple",
+          price: "LKR 990.00",
+          image: "assest/sale/3.avif",
+        },
+        {
+          id: 4,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Black",
+          price: "LKR 990.00",
+          image: "assest/sale/4.avif",
+        },
+        {
+          id: 5,
+          title: "VENOM Women's Crew Neck Cotton T-Shirt Soft Pink",
+          price: "LKR 990.00",
+          image: "assest/sale/5.avif",
+        },
+      ];
 
-        document.write(
-          `<div class="h4 pb-2 mb-4 border-bottom border-3 mt-5">SALE</div>`
-        );
-        document.write(`<div class="row row-cols-1 row-cols-md-5 g-4">`);
+      document.write(
+        `<div class="h4 pb-2 mb-4 border-bottom border-3 mt-5">SALE</div>`
+      );
+      document.write(`<div class="row row-cols-1 row-cols-md-5 g-4">`);
 
-        sale.forEach((item) => {
-          document.write(`
+      sale.forEach((item) => {
+        document.write(`
               <div class="col position-relative">
                 <div class="card h-100 hover-div">
                     <img src="${item.image}" class="card-img-top" alt="${item.image}">
@@ -501,60 +445,60 @@
                 </div>
               </div>
             `);
-        });
+      });
 
-        document.write(`</div>`);
-      </script> -->
-      <script src="components/all.js"></script>
-    </section>
+      document.write(`</div>`);
+    </script> -->
+    <script src="components/all.js"></script>
+  </section>
 
-    <div class="empty"></div>
+  <div class="empty"></div>
 
-    <section class="container mt-5">
-      <div class="row">
-        <div class="col-6">
-          <p class="fs-1 fw-bold text-uppercase">Experience the Difference</p>
-          <p class="fw-medium my-font me-4 pe-4">
-            Discover a shopping experience like no other, with handpicked
-            products, seamless service, and exclusive offers that elevate every
-            purchase. Enjoy quality, convenience, and care all in one place.
-          </p>
-        </div>
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-6">
+        <p class="fs-1 fw-bold text-uppercase">Experience the Difference</p>
+        <p class="fw-medium my-font me-4 pe-4">
+          Discover a shopping experience like no other, with handpicked
+          products, seamless service, and exclusive offers that elevate every
+          purchase. Enjoy quality, convenience, and care all in one place.
+        </p>
       </div>
-      <div class="row">
-        <script>
-          const services = [
-            {
-              id: 1,
-              title: "Fast and Reliable Delivery",
-              image: "assest/services/delivery.png",
-            },
-            {
-              id: 2,
-              title: "Easy Returns and Exchanges",
-              image: "assest/services/returns.png",
-            },
-            {
-              id: 3,
-              title: "24/7 Customer Support",
-              image: "assest/services/CustomerSupport.png",
-            },
-            {
-              id: 4,
-              title: "Personalized Shopping Experience",
-              image: "assest/services/Experience.png",
-            },
-            {
-              id: 5,
-              title: "Secure Payment Options",
-              image: "assest/services/SecurePayment.png",
-            },
-          ];
+    </div>
+    <div class="row">
+      <script>
+        const services = [
+          {
+            id: 1,
+            title: "Fast and Reliable Delivery",
+            image: "assest/services/delivery.png",
+          },
+          {
+            id: 2,
+            title: "Easy Returns and Exchanges",
+            image: "assest/services/returns.png",
+          },
+          {
+            id: 3,
+            title: "24/7 Customer Support",
+            image: "assest/services/CustomerSupport.png",
+          },
+          {
+            id: 4,
+            title: "Personalized Shopping Experience",
+            image: "assest/services/Experience.png",
+          },
+          {
+            id: 5,
+            title: "Secure Payment Options",
+            image: "assest/services/SecurePayment.png",
+          },
+        ];
 
-          document.write(`<div class="row row-cols-1 row-cols-md-5 g-4">`);
+        document.write(`<div class="row row-cols-1 row-cols-md-5 g-4">`);
 
-          services.forEach((service) => {
-            document.write(`
+        services.forEach((service) => {
+          document.write(`
                     <div class="col">
                       <div class="card h-100 my-card hover-div">
                         <img src="${service.image}" class="card-img-top" alt="${service.title}">
@@ -564,158 +508,144 @@
                       </div>
                     </div>
               `);
-          });
+        });
 
-          document.write(`</div>`);
-        </script>
-      </div>
-    </section>
+        document.write(`</div>`);
+      </script>
+    </div>
+  </section>
 
-    <section class="footer">
-      <footer>
-        <div class="footer-page">
-          <div class="container text-center">
-            <div class="row">
-              <div class="col m-3"></div>
+  <section class="footer">
+    <footer>
+      <div class="footer-page">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col m-3"></div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="assest/Venom-icon.png" alt="Logo" width="250px" />
+              <p class="my-para">
+                Venom Apparel is more than just a clothing brand it's a
+                lifestyle. Designed for individuals who thrive on energy,
+                strength, and self-expression, Venom Apparel blends bold
+                aesthetics with high-performance functionality. Whether you're
+                conquering the gym, dominating the streets, or making a
+                fashion statement, Venom Apparel has something for everyone.
+              </p>
+              <div class="links">
+                <a href="http://instagram.com" title="instagram"><img src="assest/instagram.svg" alt="instagram"
+                    class="s-link" /></a>
+                <a href="http://facebook.com" title="facebook"><img src="assest/facebook.svg" alt="facebook"
+                    class="s-link" /></a>
+                <a href="http://twitter.com" title="twitter"><img src="assest/twitter.svg" alt="twitter"
+                    class="s-link" /></a>
+              </div>
             </div>
-            <div class="row">
-              <div class="col">
-                <img src="assest/Venom-icon.png" alt="Logo" width="250px" />
-                <p class="my-para">
-                  Venom Apparel is more than just a clothing brand it's a
-                  lifestyle. Designed for individuals who thrive on energy,
-                  strength, and self-expression, Venom Apparel blends bold
-                  aesthetics with high-performance functionality. Whether you're
-                  conquering the gym, dominating the streets, or making a
-                  fashion statement, Venom Apparel has something for everyone.
-                </p>
-                <div class="links">
-                  <a href="http://instagram.com" title="instagram"
-                    ><img
-                      src="assest/instagram.svg"
-                      alt="instagram"
-                      class="s-link"
-                  /></a>
-                  <a href="http://facebook.com" title="facebook"
-                    ><img
-                      src="assest/facebook.svg"
-                      alt="facebook"
-                      class="s-link"
-                  /></a>
-                  <a href="http://twitter.com" title="twitter"
-                    ><img src="assest/twitter.svg" alt="twitter" class="s-link"
-                  /></a>
+            <div class="col content">
+              <h5>INFORMATION</h5>
+              <ul>
+                <li><a href="pages/faq.html">FAQ</a></li>
+                <li><a href="pages/about_us.html">About Us</a></li>
+                <li>
+                  <a href="pages/privacy_policy.html">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="pages/terms_conditions.html">Terms & Conditions</a>
+                </li>
+                <li><a href="pages/delivery.html">Delivery Details</a></li>
+                <li><a href="pages/return_policy.html">Return Policy</a></li>
+              </ul>
+            </div>
+            <div class="col content">
+              <h5>GET IN TOUCH</h5>
+              <p>
+                <u>Online Store</u><br />
+                No.10,<br />
+                Kawdana Road,<br />
+                Dehiwala.<br />
+                077 3540 816 <br />
+                care@venomapparel.lk <br /><br />
+                <u>Head Office</u> <br />
+                No.18,<br />
+                Kawdana Road,<br />
+                Dehiwala. <br />
+                0112 737 441 <br />
+                info@venomapparel.lk <br />
+                <br /><br />
+                Mon-Fri : 8.30 AM to 6.30 PM <br />
+                Saturday : 8.30 AM to 1.30 PM <br />
+                Sunday : Closed <br />
+              </p>
+            </div>
+            <div class="col content">
+              <h5>Subscribe to newsletter</h5>
+              <form>
+                <div class="mb-3">
+                  <input type="email" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Enter your email here" required />
                 </div>
-              </div>
-              <div class="col content">
-                <h5>INFORMATION</h5>
-                <ul>
-                  <li><a href="pages/faq.html">FAQ</a></li>
-                  <li><a href="pages/about_us.html">About Us</a></li>
-                  <li>
-                    <a href="pages/privacy_policy.html">Privacy Policy</a>
-                  </li>
-                  <li>
-                    <a href="pages/terms_conditions.html">Terms & Conditions</a>
-                  </li>
-                  <li><a href="pages/delivery.html">Delivery Details</a></li>
-                  <li><a href="pages/return_policy.html">Return Policy</a></li>
-                </ul>
-              </div>
-              <div class="col content">
-                <h5>GET IN TOUCH</h5>
-                <p>
-                  <u>Online Store</u><br />
-                  No.10,<br />
-                  Kawdana Road,<br />
-                  Dehiwala.<br />
-                  077 3540 816 <br />
-                  care@venomapparel.lk <br /><br />
-                  <u>Head Office</u> <br />
-                  No.18,<br />
-                  Kawdana Road,<br />
-                  Dehiwala. <br />
-                  0112 737 441 <br />
-                  info@venomapparel.lk <br />
-                  <br /><br />
-                  Mon-Fri : 8.30 AM to 6.30 PM <br />
-                  Saturday : 8.30 AM to 1.30 PM <br />
-                  Sunday : Closed <br />
-                </p>
-              </div>
-              <div class="col content">
-                <h5>Subscribe to newsletter</h5>
-                <form>
-                  <div class="mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="exampleFormControlInput1"
-                      placeholder="Enter your email here"
-                      required
-                    />
-                  </div>
-                  <div class="d-grid gap-2">
-                    <button class="btn btn-secondary" type="submit">
-                      Subscribe
-                    </button>
-                  </div>
-                </form>
-                <p class="my-para">
-                  By subscribing, you agree to receive recurring automated
-                  promotional and personalized marketing emails (e.g. cart
-                  reminders) from us at the email used when subscribing.
-                </p>
-              </div>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-secondary" type="submit">
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+              <p class="my-para">
+                By subscribing, you agree to receive recurring automated
+                promotional and personalized marketing emails (e.g. cart
+                reminders) from us at the email used when subscribing.
+              </p>
             </div>
           </div>
         </div>
-        <hr />
-        <p class="water-mark">
-          © 2024 VENOM APPARELS All rights reserved. Powered by ROOTCODE
-        </p>
-      </footer>
-    </section>
+      </div>
+      <hr />
+      <p class="water-mark">
+        © 2024 VENOM APPARELS All rights reserved. Powered by ROOTCODE
+      </p>
+    </footer>
+  </section>
 
-    <script>
-      window.localStorage.setItem("cart", JSON.stringify([]));
+  <script>
+    window.localStorage.setItem("cart", JSON.stringify([]));
 
-      function addToCart(item) {
-        let cart = JSON.parse(localStorage.getItem("cart"));
-        cart.push(item);
-        localStorage.setItem("cart", JSON.stringify(cart));
+    function addToCart(item) {
+      let cart = JSON.parse(localStorage.getItem("cart"));
+      cart.push(item);
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    // const display = () => {
+    //   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    //   cart.forEach((id) => {
+    //     sale.forEach((item) => {
+    //       if (item.id == id) {
+    //         const wishlistContainer = document.getElementById("wishlist-items");
+    //         const itemTitle = document.createElement("h5");
+    //         itemTitle.textContent = item.title;
+    //         wishlistContainer.appendChild(itemTitle);
+
+    //       }
+    //     });
+    //   });
+    // };
+
+    const display = () => {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const container = document.getElementById("wishlist-items");
+
+      if (!container) {
+        console.error("Container with ID 'wishlist-items' not found.");
+        return;
       }
 
-      // const display = () => {
-      //   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      //   cart.forEach((id) => {
-      //     sale.forEach((item) => {
-      //       if (item.id == id) {
-      //         const wishlistContainer = document.getElementById("wishlist-items");
-      //         const itemTitle = document.createElement("h5");
-      //         itemTitle.textContent = item.title;
-      //         wishlistContainer.appendChild(itemTitle);
+      container.innerHTML = "";
 
-      //       }
-      //     });
-      //   });
-      // };
-
-      const display = () => {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        const container = document.getElementById("wishlist-items");
-
-        if (!container) {
-          console.error("Container with ID 'wishlist-items' not found.");
-          return;
-        }
-
-        container.innerHTML = "";
-
-        cart.forEach((id) => {
-          sale.forEach((item) => {
-            if (item.id == id) {
-              const card = `
+      cart.forEach((id) => {
+        sale.forEach((item) => {
+          if (item.id == id) {
+            const card = `
           <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
               <div class="col-md-4">
@@ -730,17 +660,18 @@
             </div>
           </div>
         `;
-              container.innerHTML += card;
-            }
-          });
+            container.innerHTML += card;
+          }
         });
-      };
+      });
+    };
 
-      const gotoLogin = () => {
-        window.location.href = "pages/login.html";
-      };
-    </script>
+    const gotoLogin = () => {
+      window.location.href = "pages/login.html";
+    };
+  </script>
 
-    <script src="bootstrap.js"></script>
-  </body>
+  <script src="bootstrap.js"></script>
+</body>
+
 </html>

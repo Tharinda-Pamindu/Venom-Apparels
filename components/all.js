@@ -46,7 +46,7 @@ new_arrivals.forEach((item) => {
                     <div class="card-body"><h5 class="card-title">${item.price}</h5></div>
                     <p class="card-text px-3">${item.title}</p>
                     <div class="card-footer text-end">
-                      <button class="btn me-2"><img src="assest/Heart.gif" alt="WishList" class="tool-items" /></button>
+                      <button class="btn me-2" onClick="addToCart([${item.id}]);"><img src="assest/Heart.gif" alt="WishList" class="tool-items" /></button>
                       <a href="#" class="btn btn-primary px-3">READ MORE</a>
                     </div>
                 </div>
@@ -102,7 +102,7 @@ men.forEach((item) => {
                     <div class="card-body"><h5 class="card-title">${item.price}</h5></div>
                     <p class="card-text px-3">${item.title}</p>
                     <div class="card-footer text-end">
-                      <button class="btn me-2"><img src="assest/Heart.gif" alt="WishList" class="tool-items" /></button>
+                      <button class="btn me-2" onClick="addToCart([${item.id}]);"><img src="assest/Heart.gif" alt="WishList" class="tool-items" /></button>
                       <a href="#" class="btn btn-primary px-3">READ MORE</a>
                     </div>
                 </div>
@@ -158,7 +158,7 @@ women.forEach((item) => {
                     <div class="card-body"><h5 class="card-title">${item.price}</h5></div>
                     <p class="card-text px-3">${item.title}</p>
                     <div class="card-footer text-end">
-                      <button class="btn me-2"><img src="assest/Heart.gif" alt="WishList" class="tool-items" /></button>
+                      <button class="btn me-2" onClick="addToCart([${item.id}]);"><img src="assest/Heart.gif" alt="WishList" class="tool-items" /></button>
                       <a href="#" class="btn btn-primary px-3">READ MORE</a>
                     </div>
                 </div>
@@ -214,7 +214,7 @@ kids.forEach((item) => {
                     <div class="card-body"><h5 class="card-title">${item.price}</h5></div>
                     <p class="card-text px-3">${item.title}</p>
                     <div class="card-footer text-end">
-                      <button class="btn me-2"><img src="assest/Heart.gif" alt="WishList" class="tool-items" /></button>
+                      <button class="btn me-2" onClick="addToCart([${item.id}]);"><img src="assest/Heart.gif" alt="WishList" class="tool-items" /></button>
                       <a href="#" class="btn btn-primary px-3">READ MORE</a>
                     </div>
                 </div>
@@ -270,7 +270,7 @@ watch.forEach((item) => {
                     <div class="card-body"><h5 class="card-title">${item.price}</h5></div>
                     <p class="card-text px-3">${item.title}</p>
                     <div class="card-footer text-end">
-                      <button class="btn me-2"><img src="assest/Heart.gif" alt="WishList" class="tool-items" /></button>
+                      <button class="btn me-2" onClick="addToCart([${item.id}]);"><img src="assest/Heart.gif" alt="WishList" class="tool-items" /></button>
                       <a href="#" class="btn btn-primary px-3">READ MORE</a>
                     </div>
                 </div>
