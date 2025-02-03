@@ -64,20 +64,20 @@
         <div class="col-6 p-4">
           <!-- Form -->
           <h3 class="mb-5 text-primary mt-4">Sign Up</h3>
-          <form class="row g-3 px-4 mx-4" onsubmit="checkValidate()">
+          <form class="row g-3 px-4 mx-4" onsubmit="return checkValidate(event)" action="../signup.php" method="POST">
             <div class="form-floating">
               <input type="text" class="form-control shadow ps-3 border border-3 border-primary" id="username"
-                placeholder="name@example.com" />
+                placeholder="name@example.com" name="name" />
               <label for="username" class="ms-3 text-primary">Username</label>
             </div>
             <div class="form-floating">
               <input type="email" class="form-control shadow ps-3 border border-3 border-primary" id="mail"
-                placeholder="name@example.com" />
+                placeholder="name@example.com" name="email" />
               <label for="mail" class="ms-3 text-primary">Email address</label>
             </div>
             <div class="form-floating">
               <input type="password" class="form-control shadow ps-3 border border-3 border-primary" id="password"
-                placeholder="Password" />
+                placeholder="Password" name="password" />
               <label for="password" class="ms-3 text-primary">Password</label>
             </div>
             <div class="form-floating">
@@ -106,7 +106,7 @@
     </div>
 
     <script>
-      const checkValidate = () => {
+      const checkValidate = (event) => {
         event.preventDefault();
 
         const toastElement = document.getElementById("liveToast");
@@ -176,7 +176,31 @@
           document.getElementById("toast-image").src = "../assest/success.gif";
           document.getElementById("toast-image").alt = "success image";
           toast.show();
+
+          const formData = new FormData();
+          formData.append("name", username);
+          formData.append("email", email);
+          formData.append("password", password);
+
+          fetch("../signup.php", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.text())
+            .then((data) => {
+              document.getElementById("response").innerText = data;
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              document.getElementById("response").innerText = "An error occurred.";
+            });
+
+            window.location.href="http://localhost/Web/pages/login.html";
+        }else{
+          return false;
         }
+
+        return true;
 
       };
     </script>
